@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: 'Manrope', sans-serif;
+    --error-message: #FF2965;
+    --electric-green: #3EE9E5;
+    --white: #FFFFFF;
+    --grey: #777F98;
+    --slate: #093F68;
+    --dark-bg: #080C20;
+}
