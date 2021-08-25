@@ -13,3 +13,67 @@
     --slate: #093F68;
     --dark-bg: #080C20;
 }
+
+body {
+    background-color: var(--dark-bg)
+}
+
+main {
+    max-width: 1700px;
+    margin: 0 auto;
+}
+
+.logo__container {
+    padding-left: 130px;
+    padding-top: 50px;
+    margin-bottom: 80px;
+}
+
+.hero__contents {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.hero__left {
+margin-left: -60px;
+}
+
+.hero__right {
+  margin-right: -60px;
+}
+
+.hero__text--contents {
+    max-width: 600px;
+    text-align: center;
+    background: url("/assets/bg-hero-squiggle.svg");
+    background-size: cover;
+    margin-top: 40px;
+    
+}
+
+.hero__headline {
+    color: var(--white);
+    font-size: clamp(1rem, 4vw, 4rem);
+    margin-bottom: 20px;
+}
+
+.hero__description {
+    color: var(--grey);
+    margin-bottom: 40px;
+    padding: 0 50px;
+    line-height: 1.6;
+}
+
+span {
+    color: var(--electric-green)
+}
+
+
+
+
+
+
+
+
+
