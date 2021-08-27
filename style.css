@@ -83,12 +83,14 @@ span {
 
 .selling__points {
     padding: 30px;
+    margin-bottom: 50px;
 }
 
 .icon__headline {
     color: var(--white);
     text-align: center;
     font-size: 1rem;
+    margin-bottom: 10px;
 }
 
 .icon__paragraph {
@@ -114,6 +116,15 @@ span {
 
 }
 
+.icon:hover {
+    transform: translateY(5%);
+    transition: 0.2s ease-in-out;
+}
+
+.icon h2:hover {
+    color: var(--electric-green);
+}
+
 .icon__image--container {
     background-color: var(--slate);
     border-radius: 30px;
@@ -125,6 +136,76 @@ span {
     object-fit: cover;
 
 }
+
+.low {
+    margin-top: 70px;
+}
+
+/* Pricing Section *******/
+.pricing {
+   
+}
+
+.pricing__text--container {
+    max-width: 600px;
+   margin: 0 auto 100px;
+}
+
+
+
+.pricing__headline {
+    color: var(--white);
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+
+}
+
+.pricing__description {
+    color: var(--grey);
+    line-height: 1.6;
+    text-align: center;
+}
+
+.card {
+    background: var(--slate);
+    max-width: 500px;
+    border-radius: 10px;
+    padding: 50px;
+    position: relative;
+}
+
+.card__icon {
+    position: absolute;
+    top: -20px;
+}
+
+.card__blurb {
+    margin-bottom: 20px;
+    color: var(--white);
+}
+
+.pricing__card--description {
+    margin-bottom: 20px;
+    color: var(--grey);
+}
+
+.card__price {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: var(--white)
+}
+
+
+li {
+    color: var(--white);
+    margin-bottom: 18px;
+}
+
+.light {
+    background: var(--electric-green)
+}
+
 
 
 
@@ -155,4 +236,39 @@ span {
 
     }
 
+    /*  Icons *****************/
+
+    .icons__container {
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+    }
+
+    .icon {
+        display: flex;
+        flex-direction: row;
+        ;
+    }
+
+    .low {
+        margin-top: 0;
+        margin-left: 80px;
+    }
+
+    .high {
+        margin-right: 80px;
+    }
+
+}
+
+/* centered icons */
+
+@media (max-width: 465px) {
+    .low {
+        margin-left: 0;
+    }
+
+    .high {
+        margin-right: 0;
+    }
 }
