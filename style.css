@@ -18,6 +18,12 @@ body {
     background-color: var(--dark-bg)
 }
 
+/*  Hero Section *********/
+
+.hero {
+    margin-bottom: 50px;
+}
+
 main {
     max-width: 1700px;
     margin: 0 auto;
@@ -30,38 +36,42 @@ main {
 }
 
 .hero__contents {
-    display: flex;
-    justify-content: center;
-    position: relative;
+    display: grid;
+    grid-template-areas:
+        "left text right";
 }
 
 .hero__left {
-margin-left: -60px;
+    width: 90%;
+    grid-area: left;
 }
 
 .hero__right {
-  margin-right: -60px;
+    grid-area: right;
+    width: 100%;
 }
 
 .hero__text--contents {
-    max-width: 600px;
+    max-width: 700px;
     text-align: center;
-    background: url("/assets/bg-hero-squiggle.svg");
+    background: url("assets/bg-hero-squiggle.svg");
     background-size: cover;
     margin-top: 40px;
-    
+    grid-area: text;
+
+
 }
 
 .hero__headline {
     color: var(--white);
-    font-size: clamp(1rem, 4vw, 4rem);
+    font-size: clamp(1.8rem, 4vw, 4.5rem);
     margin-bottom: 20px;
 }
 
 .hero__description {
     color: var(--grey);
     margin-bottom: 40px;
-    padding: 0 50px;
+    padding: 0 20px;
     line-height: 1.6;
 }
 
@@ -69,11 +79,80 @@ span {
     color: var(--electric-green)
 }
 
+/* Selling Points  *************/
+
+.selling__points {
+    padding: 30px;
+}
+
+.icon__headline {
+    color: var(--white);
+    text-align: center;
+    font-size: 1rem;
+}
+
+.icon__paragraph {
+    color: var(--grey);
+    text-align: center;
+    font-size: .8rem;
+}
+
+.icons__container {
+    max-width: 95%;
+    display: flex;
+    margin: auto;
+    gap: 70px;
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+    gap: 20px;
+
+}
+
+.icon__image--container {
+    background-color: var(--slate);
+    border-radius: 30px;
+    padding: 20px;
+}
+
+.icon__image {
+    width: 70px;
+    object-fit: cover;
+
+}
 
 
 
 
 
+/* responsive hero ***************/
+
+@media (max-width: 800px) {
+    .logo__container {
+        display: flex;
+        justify-content: center;
+        padding-left: 0px;
+        padding-top: 50px;
+        margin-bottom: 80px;
+    }
 
 
+    .hero__contents {
+        grid-template-areas:
+            "left right"
+            "text text";
+    }
 
+    .hero__text--contents {
+        margin: 0 auto;
+        margin-top: 50px;
+        padding: 0 20px;
+
+    }
+
+}
