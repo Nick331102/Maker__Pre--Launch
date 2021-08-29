@@ -142,9 +142,24 @@ span {
 }
 
 /* Pricing Section *******/
+
 .pricing {
-   
+    margin-bottom: 40px;
+  
 }
+
+
+
+.pricing__cards--container {
+display: grid;
+grid-template-areas: 
+"dark light";
+gap: 30px;
+padding: 20px;
+margin: 0 auto;
+max-width: 900px;;
+}
+
 
 .pricing__text--container {
     max-width: 600px;
@@ -173,8 +188,22 @@ span {
     border-radius: 10px;
     padding: 50px;
     position: relative;
+    grid-area: dark;
 }
 
+.light {
+    background: var(--electric-green);
+    grid-area: light;
+    position: relative;
+    max-width: 500px;
+    border-radius: 10px;
+    padding: 50px;
+}
+
+.card__icon--two {
+    position: absolute;
+    top: -30px;
+}
 .card__icon {
     position: absolute;
     top: -20px;
@@ -193,7 +222,12 @@ span {
 .card__price {
     margin-bottom: 20px;
     font-size: 2.5rem;
-    color: var(--white)
+    color: var(--dark-bg)
+}
+
+.small__price {
+    color: var(--grey);
+    font-size: 1rem;
 }
 
 
@@ -202,9 +236,64 @@ li {
     margin-bottom: 18px;
 }
 
-.light {
-    background: var(--electric-green)
+/* Footer ******************/
+
+
+
+.footer__form {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url("/assets/bg-footer-squiggle.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
+
+.footer__headline {
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.email {
+    padding: 8px;
+    width: 250px;
+    border-radius: 10px;
+    border: none;
+    background: var(--slate);
+    color: rgb(233, 213, 213);
+    margin-right: 10px;
+    letter-spacing: 1px;
+
+    
+}
+
+.email:focus {
+    border: 1px solid white;
+}
+
+.submit {
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--electric-green);
+    color: var(--dark-bg);
+    width: 100px;
+    letter-spacing: 1px;
+    cursor: pointer;
+   
+}
+
+.submit:hover {
+    border: 2px solid var(--electric-green);
+    background-color: var(--dark-bg);
+    color: white;
+    transition: 0.2s ease-in-out;
+
+}
+
 
 
 
@@ -259,6 +348,20 @@ li {
         margin-right: 80px;
     }
 
+    /* responsive grid **************/
+
+    .pricing__cards--container {
+        grid-template-areas:
+        "dark"
+        "light";
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        gap: 60px;
+    }
+
 }
 
 /* centered icons */
@@ -271,4 +374,21 @@ li {
     .high {
         margin-right: 0;
     }
+
+    
+}
+
+/* Responsive form ***********/
+
+@media (max-width: 500px) {
+    .form__contents--container{
+        display: flex;
+    flex-direction: column;
+}
+
+.email,
+.submit {
+    width: 300px;
+    margin-bottom: 15px;
+}
 }
