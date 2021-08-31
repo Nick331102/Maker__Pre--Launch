@@ -284,7 +284,13 @@ li {
 
 .footer__headline {
     color: var(--white);
-    margin-bottom: 20px;
+    padding-bottom: 10px;
+   
+   
+}
+
+.form__container {
+    margin-top: 20px;
 }
 
 .email {
@@ -296,12 +302,13 @@ li {
     color: rgb(233, 213, 213);
     margin-right: 10px;
     letter-spacing: 1px;
-
+  
     
 }
 
 .email:focus {
-    border: 1px solid white;
+    outline: 2px solid white;
+    
 }
 
 .submit {
@@ -313,14 +320,16 @@ li {
     width: 100px;
     letter-spacing: 1px;
     cursor: pointer;
+    white-space: nowrap;
    
 }
 
 .submit:hover {
-    border: 2px solid var(--electric-green);
+    outline: 2px solid var(--electric-green);
     background-color: var(--dark-bg);
     color: white;
     transition: 0.2s ease-in-out;
+    margin: -2px;
 
 }
 
