@@ -270,7 +270,7 @@ li {
 
 
 .footer__form {
-    height: 200px;
+    height: 320px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -278,6 +278,7 @@ li {
     background: url("assets/bg-footer-squiggle.svg");
     background-repeat: no-repeat;
     background-size: cover;
+    
     
 }
 
@@ -418,6 +419,7 @@ li {
 .email,
 .submit {
     width: 300px;
-    margin-bottom: 15px;
+   
+    margin: 10px auto;
 }
 }
